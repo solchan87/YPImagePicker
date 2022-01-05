@@ -42,13 +42,6 @@ internal final class YPCameraVC: UIViewController, UIGestureRecognizerDelegate, 
     
     override internal func viewDidLoad() {
         super.viewDidLoad()
-        
-        if #available(iOS 15, *) {
-            let appearance = UINavigationBarAppearance()
-            appearance.configureWithOpaqueBackground()
-            UINavigationBar.appearance().standardAppearance = appearance
-            UINavigationBar.appearance().scrollEdgeAppearance = appearance
-        }
 
         v.flashButton.isHidden = true
         v.flashButton.addTarget(self, action: #selector(flashButtonTapped), for: .touchUpInside)
